@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import { selectAllTasks, selectLoading } from 'redux/tasks/selectors';
 import { deleteTask } from 'redux/tasks/operations';
 import { getFilter } from 'redux/filter/selectors';
-import { useEffect } from 'react';
 
 export const ContactList = () => {
   const isLoading = useSelector(selectLoading);
@@ -15,8 +14,6 @@ export const ContactList = () => {
   const visibleContact = contacts.filter(item =>
     item.name.toLowerCase().includes(filter.toLowerCase())
   );
-
-  // useEffect(() => {}, filter);
 
   return (
     <ul>
