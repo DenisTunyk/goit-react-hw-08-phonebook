@@ -10,7 +10,6 @@ import { setFilter } from 'redux/filter/filterSlice';
 export const Filter = () => {
   const [filterStr, setFilterStr] = useState('');
 
-  //const filter = useSelector(getFilter);
   const dispatch = useDispatch();
 
   const onChange = e => {
